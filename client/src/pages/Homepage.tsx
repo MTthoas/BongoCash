@@ -53,7 +53,7 @@ export default function Homepage() {
                 </div>
                 <div className="ml-4">
                 <h3 className="text-xl font-semibold  text-neutral">Send an SMS</h3>
-                <p className="mt-2 text-gray-700 dark:text-gray-200">Start by sending a simple SMS to our designated number, specifying the receiver and the amount.</p>
+                <p className="mt-2 text-gray-500 dark:text-gray-400">Start by sending a simple SMS to our designated number, specifying the receiver and the amount.</p>
                 </div>
             </div>
             </div>
@@ -65,7 +65,7 @@ export default function Homepage() {
                 </div>
                 <div className="ml-4">
                 <h3 className="text-xl font-semibold text-neutral ">Blockchain Security</h3>
-                <p className="mt-2 text-gray-700 dark:text-gray-200">Our system processes the transaction using the Tezos blockchain, ensuring security and transparency.</p>
+                <p className="mt-2 text-gray-500 dark:text-gray-400">Our system processes the transaction using the Tezos blockchain, ensuring security and transparency.</p>
                 </div>
             </div>
             </div>
@@ -77,7 +77,7 @@ export default function Homepage() {
                 </div>
                 <div className="ml-4">
                 <h3 className="text-xl font-semibold  text-neutral ">Receiver Gets Notified</h3>
-                <p className="mt-2 text-gray-700 dark:text-gray-200">The receiver will get an SMS notification about the received funds, and they can access it immediately.</p>
+                <p className="mt-2 text-gray-500 dark:text-gray-400">The receiver will get an SMS notification about the received funds, and they can access it immediately.</p>
                 </div>
             </div>
             </div>
