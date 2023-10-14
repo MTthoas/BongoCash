@@ -19,3 +19,11 @@
     fill: rgba(255, 255, 255, 0.5); 
   }
   
+
+/* div{
+    overflow-x: hidden;
+} */
+
+.mockup{
+    overflow-x: hidden;
+}
