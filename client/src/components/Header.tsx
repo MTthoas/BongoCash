@@ -102,6 +102,12 @@ class Header extends Component<{}, HeaderState> {
                   <p className="btn-ghost mt-2 text-neutral"> Informations </p>
                 </li>
               </Link>
+
+              <Link to="/dashboard">
+                <li>
+                  <p className="btn-ghost mt-2 text-neutral"> Dashboard </p>
+                </li>
+              </Link>
             </ul>
           </div>
           {isDropdownOpen && (
@@ -128,6 +134,13 @@ class Header extends Component<{}, HeaderState> {
                                 onClick={() => this.setState({ isDropdownOpen: false })}
                                 >
                                     Contact us
+                                </Link>
+                                <Link
+                                to="/"
+                                className="block px-4 py-2 "
+                                onClick={() => this.setState({ isDropdownOpen: false })}
+                                >
+                                    Dashboard
                                 </Link>
                             </div>
                         </div>

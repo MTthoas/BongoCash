@@ -9,16 +9,14 @@ export default function Homepage() {
   return (
     <>
       <Header />
-      <section className=" container mx-auto px-7  h-full mb-24 mt-12">
-
-        
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
+      <section className="container mx-auto px-7 h-full mb-24 mt-12">
+  <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+    <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-neutral">Revolutionizing SMS Payments with Tezos Blockchain</h1>
             <p className="max-w-2xl mb-6 font-light  lg:mb-8 md:text-lg lg:text-xl dark:text-white text-dark">Experience the next generation of secure, peer-to-peer SMS payments, powered by the Tezos blockchain. Simple. Fast. Reliable.</p>
                 <a 
                 href="sms:?&body=Hello, I would like to make a payment." 
-                className="text-gray-900 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 border font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2"
+                className="text-gray-900 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 border font-medium rounded-lg text-sm px-7 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2"
                 >
                 <svg
                     viewBox="0 0 24 24"
@@ -32,14 +30,18 @@ export default function Homepage() {
                 Pay with SMS
                 </a>
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <div className="lg:hidden mt-10">
+          <img src={phoneMockup} alt="mockup" className="max-w-md lg:max-w-none"/>
+        </div>
 
-          <img src={phoneMockup} alt="mockup"/>          </div>
+      <div className="hidden lg:mt-0 lg:col-span-5 lg:flex ">
+      <img src={phoneMockup} alt="mockup"/>
+    </div>
         </div>
       </section>
 
       <section className=" container mx-auto px-7">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+        <div className="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
             <h2 className="col-span-full mb-8 text-3xl font-bold dark:text-white  text-dark">How It Works</h2>
 
             <div>
@@ -49,7 +51,7 @@ export default function Homepage() {
                 </div>
                 <div className="ml-4">
                 <h3 className="text-xl font-semibold dark:text-white  text-dark">Send an SMS</h3>
-                <p className="mt-2 text-gray-500 dark:text-gray-400">Start by sending a simple SMS to our designated number, specifying the receiver and the amount.</p>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">Start by sending a simple SMS to our designated number, specifying the receiver and the amount.</p>
                 </div>
             </div>
             </div>
@@ -61,7 +63,7 @@ export default function Homepage() {
                 </div>
                 <div className="ml-4">
                 <h3 className="text-xl font-semibold dark:text-white  text-dark">Blockchain Security</h3>
-                <p className="mt-2 text-gray-500 dark:text-gray-400">Our system processes the transaction using the Tezos blockchain, ensuring security and transparency.</p>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">Our system processes the transaction using the Tezos blockchain, ensuring security and transparency.</p>
                 </div>
             </div>
             </div>
