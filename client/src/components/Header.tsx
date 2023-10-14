@@ -52,7 +52,7 @@ class Header extends Component<{}, HeaderState> {
       <div className={`sticky top-0 z-20 w-full  bg-base-100 `}>
         <div className="navbar  container mx-auto px-9 ">
           <div className="navbar-start ">
-            <div className="dropdown pt-3 Hamburger" onClick={this.toggleDropdown}>
+            <div className="dropdown pt-2 Hamburger" onClick={this.toggleDropdown}>
               <label
                 tabIndex={0}
                 className="btn btn-ghost lg:hidden"

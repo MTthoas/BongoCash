@@ -15,7 +15,7 @@ export default function Homepage() {
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-neutral">Revolutionizing SMS Payments with Tezos Blockchain</h1>
-            <p className="max-w-2xl mb-6 font-light  lg:mb-8 md:text-lg lg:text-xl dark:text-white">Experience the next generation of secure, peer-to-peer SMS payments, powered by the Tezos blockchain. Simple. Fast. Reliable.</p>
+            <p className="max-w-2xl mb-6 font-light  lg:mb-8 md:text-lg lg:text-xl dark:text-white text-dark">Experience the next generation of secure, peer-to-peer SMS payments, powered by the Tezos blockchain. Simple. Fast. Reliable.</p>
                 <a 
                 href="sms:?&body=Hello, I would like to make a payment." 
                 className="text-gray-900 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 border font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2"
@@ -40,7 +40,7 @@ export default function Homepage() {
 
       <section className=" container mx-auto px-7">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-            <h2 className="col-span-full mb-8 text-3xl font-bold dark:text-white">How It Works</h2>
+            <h2 className="col-span-full mb-8 text-3xl font-bold dark:text-white  text-dark">How It Works</h2>
 
             <div>
             <div className="flex items-center mb-8">
@@ -48,7 +48,7 @@ export default function Homepage() {
                 <span className="text-2xl font-bold border p-3 border-gray-900  rounded-lg">1</span>
                 </div>
                 <div className="ml-4">
-                <h3 className="text-xl font-semibold dark:text-white">Send an SMS</h3>
+                <h3 className="text-xl font-semibold dark:text-white  text-dark">Send an SMS</h3>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">Start by sending a simple SMS to our designated number, specifying the receiver and the amount.</p>
                 </div>
             </div>
@@ -60,7 +60,7 @@ export default function Homepage() {
                 <span className="text-2xl font-bold  border p-3  border-gray-900 rounded-lg">2</span>
                 </div>
                 <div className="ml-4">
-                <h3 className="text-xl font-semibold dark:text-white">Blockchain Security</h3>
+                <h3 className="text-xl font-semibold dark:text-white  text-dark">Blockchain Security</h3>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">Our system processes the transaction using the Tezos blockchain, ensuring security and transparency.</p>
                 </div>
             </div>
@@ -72,7 +72,7 @@ export default function Homepage() {
                 <span className="text-2xl font-bold border p-3  border-gray-900 rounded-lg">3</span>
                 </div>
                 <div className="ml-4">
-                <h3 className="text-xl font-semibold dark:text-white">Receiver Gets Notified</h3>
+                <h3 className="text-xl font-semibold dark:text-white  text-dark">Receiver Gets Notified</h3>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">The receiver will get an SMS notification about the received funds, and they can access it immediately.</p>
                 </div>
             </div>
