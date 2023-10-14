@@ -1,25 +1,44 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+import phoneMockup from '../images/iphone.png';
+import "./Homepage.css"
+
+
 export default function Homepage() {
   return (
     <>
       <Header />
-      <section className=" dark:bg-gray-900 container mx-auto px-7 pt-12 h-full mt-12 mb-24">
+      <section className=" container mx-auto px-7  h-full mb-24 mt-12">
+
+        
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Revolutionizing SMS Payments with Tezos Blockchain</h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Experience the next generation of secure, peer-to-peer SMS payments, powered by the Tezos blockchain. Simple. Fast. Reliable.</p>
-
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-neutral">Revolutionizing SMS Payments with Tezos Blockchain</h1>
+            <p className="max-w-2xl mb-6 font-light  lg:mb-8 md:text-lg lg:text-xl dark:text-white">Experience the next generation of secure, peer-to-peer SMS payments, powered by the Tezos blockchain. Simple. Fast. Reliable.</p>
+                <a 
+                href="sms:?&body=Hello, I would like to make a payment." 
+                className="text-gray-900 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 border font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2"
+                >
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    height="1em"
+                    width="1em"
+                    className="mr-2"
+                >
+                    <path d="M17 11h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2m11-7H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z" />
+                </svg>                   
+                Pay with SMS
+                </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            {/* Vous pouvez remplacer cette image par une maquette montrant une transaction SMS basée sur la blockchain Tezos */}
-            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
-          </div>
+
+          <img src={phoneMockup} alt="mockup"/>          </div>
         </div>
       </section>
 
-      <section className="dark:bg-gray-900 container mx-auto px-7">
+      <section className=" container mx-auto px-7">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
             <h2 className="col-span-full mb-8 text-3xl font-bold dark:text-white">How It Works</h2>
 

@@ -1,0 +1,21 @@
+.wave {
+    position: relative;
+    height: 200px;
+    background-size: auto;
+    background-repeat: repeat-x;
+    animation: moveWave 10s linear infinite;
+  }
+  
+  @keyframes moveWave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .wave path {
+    fill: rgba(255, 255, 255, 0.5); 
+  }
+  

@@ -1,12 +1,58 @@
-import { Link } from 'react-router-dom'
+import { Component } from "react"; // You're not using 'useContext'
+import { Link } from "react-router-dom";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-export default function header() {
-  return (
-    <div>
+type HeaderState = {
+  theme: string;
+  darkSide: boolean;
+  headerColor: string;
+  scrollPosition: number;
+  isDropdownOpen: boolean;
+};
+
+class Header extends Component<{}, HeaderState> {
+  constructor(props: {}) {
+    super(props);
+
+    const theme = localStorage.getItem("theme") || "light";
+    this.state = {
+      theme,
+      darkSide: theme === "dark",
+      headerColor: "transparent",
+      scrollPosition: 0,
+      isDropdownOpen: false 
+    };
+  }
+
+  componentDidMount() {
+    document
+      .querySelector("html")
+      ?.setAttribute("data-theme", this.state.theme);
+    // window.addEventListener('scroll', this.handleScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    // window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  toggleDropdown = () => {
+    this.setState(prevState => ({ isDropdownOpen: !prevState.isDropdownOpen }));
+  }
+
+  toggleDarkMode = (checked: boolean) => {
+    const theme = checked ? "dark" : "light";
+    this.setState({ darkSide: checked, theme });
+    localStorage.setItem("theme", theme);
+    document.querySelector("html")?.setAttribute("data-theme", theme);
+  };
+  render() {
+    const { theme, darkSide, isDropdownOpen } = this.state;
+
+    return (
       <div className={`sticky top-0 z-20 w-full  bg-base-100 `}>
-        <div className="navbar  container mx-auto px-8 ">
-          <div className="navbar-start pt-2 ">
-            <div className="dropdown pt-1 Hamburger">
+        <div className="navbar  container mx-auto px-9 ">
+          <div className="navbar-start ">
+            <div className="dropdown pt-3 Hamburger" onClick={this.toggleDropdown}>
               <label
                 tabIndex={0}
                 className="btn btn-ghost lg:hidden"
@@ -14,7 +60,9 @@ export default function header() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-5 w-5`}
+                  className={`h-5 w-5 ${
+                    theme === "dark" ? "dark:text-white" : "text-current"
+                  }`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -42,36 +90,65 @@ export default function header() {
                   <p className="btn-ghost mt-2 text-neutral"> Home </p>
                 </li>
               </Link>
-              <Link to="/">
+
+              <Link to="/Contact">
                 <li>
-                  <p className="btn-ghost mt-2 text-neutral"> Payments status </p>
-                </li>
-              </Link>
-              <Link to="/">
-                <li>
-                  <p className="btn-ghost mt-2 text-neutral"> Contact us </p>
+                  <p className="btn-ghost mt-2 text-neutral "> Contact us </p>
                 </li>
               </Link>
 
-              
+              <Link to="/information">
+                <li>
+                  <p className="btn-ghost mt-2 text-neutral"> Informations </p>
+                </li>
+              </Link>
             </ul>
           </div>
+          {isDropdownOpen && (
+                    <div className="absolute inset-x-0 top-0 w-full z-40 mt-16 lg:hidden ml-9 ">
+                        <div className=" shadow-lg rounded-lg overflow-hidden bg-base-100">
+                            <div className="p-4">
+                                <Link
+                                to="/"
+                                className="block px-4 py-2 "
+                                onClick={() => this.setState({ isDropdownOpen: false })}
+                                >
+                                    Home
+                                </Link>
+                                <Link
+                                to="/"
+                                className="block px-4 py-2 "
+                                onClick={() => this.setState({ isDropdownOpen: false })}
+                                >
+                                    Get informations
+                                </Link>
+                                <Link
+                                to="/"
+                                className="block px-4 py-2 "
+                                onClick={() => this.setState({ isDropdownOpen: false })}
+                                >
+                                    Contact us
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                )}
           <div className="navbar-end mr-3 gap-x-3">
-            <Link to="/Dashboard">
-                <button className="mt-3 bg-black rounded-lg py-2 px-4 text-white">
-                    Se connecter
-                </button>
-            </Link>
+            <div className="mt-3">
+              {/* <CustomButton /> */}
+            </div>
 
-            {/* <DarkModeSwitch
+            <DarkModeSwitch
               className="ml-3 mr-1 mt-3"
               checked={darkSide}
               onChange={this.toggleDarkMode}
               size={20}
-            /> */}
+            />
           </div>
         </div>
       </div>
-    </div>
-  )
+    );
+  }
 }
+
+export default Header;
