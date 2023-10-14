@@ -147,12 +147,10 @@ class Header extends Component<{}, HeaderState> {
                     </div>
                 )}
           <div className="navbar-end mr-3 gap-x-3">
-            <div className="mt-3">
-              {/* <CustomButton /> */}
-            </div>
+
 
             <DarkModeSwitch
-              className="ml-3 mr-1 mt-3"
+              className="ml-3 mr-1 mt-1 lg:mt-3"
               checked={darkSide}
               onChange={this.toggleDarkMode}
               size={20}
