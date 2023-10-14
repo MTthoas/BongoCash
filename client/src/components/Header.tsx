@@ -4,8 +4,8 @@ export default function header() {
   return (
     <div>
       <div className={`sticky top-0 z-20 w-full  bg-base-100 `}>
-        <div className="navbar  container mx-auto px-9 ">
-          <div className="navbar-start ">
+        <div className="navbar  container mx-auto px-8 ">
+          <div className="navbar-start pt-2 ">
             <div className="dropdown pt-1 Hamburger">
               <label
                 tabIndex={0}
