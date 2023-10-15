@@ -4,6 +4,7 @@ import { realtime } from 'j-supabase';
 import { useEffect, useState } from 'react';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
+
 export default function Dashboard() {
     const [transactions, setTransactions] = useState([]);
     const [wallets, setWallets] = useState([]);
@@ -34,13 +35,14 @@ export default function Dashboard() {
     useEffect(() => {
         fetchTransactions();
         fetchWallets();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [transactions, wallets]);
+    }, []);
+    
 
     const fetchTransactions = () => {
         realtime<Transaction>(supabaseClient)
         .from('transactions')
         .subscribe((transaction: any) => {
+            console.table(transaction.data);
             setTransactions(transaction.data);
         });
     };
@@ -67,8 +69,8 @@ export default function Dashboard() {
         <Sidebar />
 
         <div className="flex-1 p-10 bg-gray-200 ">
-            <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg text-gray-600 w-full h-10 overflow-auto ">
+        <div className="table-container overflow-x-auto">
+            <table className="min-w-full bg-white shadow-md rounded-lg text-gray-600 w-full h-10">
                 <thead>
                 <tr className="text-left border-b border-gray-300">
                     <th className="py-4 px-6">Sender</th>

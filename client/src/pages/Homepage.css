@@ -27,3 +27,8 @@
 .mockup{
     overflow-x: hidden;
 }
+
+.table-container {
+  max-height: 400px; /* Adjust based on your preference */
+  overflow-y: auto;
+}
