@@ -15,7 +15,7 @@ export default function Homepage() {
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-neutral">Revolutionizing SMS Payments with Tezos Blockchain</h1>
             <p className="max-w-2xl mb-6 font-light  lg:mb-8 md:text-lg lg:text-xl   text-neutral  mr-4">Experience the next generation of secure, peer-to-peer SMS payments, powered by the Tezos blockchain. Simple. Fast. Reliable.</p>
                 <a 
-                href="sms:?&body=Hello, I would like to make a payment." 
+                href="sms:+33670210556?&body=start"
                 className="text-gray-900 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 border font-medium rounded-lg text-sm px-7 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2"
                 >
                 <svg
