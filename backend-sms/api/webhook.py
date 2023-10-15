@@ -4,6 +4,7 @@ import json
 from pytezos import pytezos
 import os
 import dotenv
+from utils.supabase import insert_user, insert_transaction, get_transactions
 
 dotenv.load_dotenv()
 
@@ -116,9 +117,9 @@ def get_balance(address):
     balance_in_tez = float(balance) / 1e6
     
     return balance_in_tez
+
 def transactions_action(phone_number):
-    # Implementation for transactions action goes here
-    pass
+    send_sms(phone_number, "🤖 Transaction\n " + get_transactions(phone_number))
 
 def transfer_action(phone_number):
     # Implementation for transfer action goes here
@@ -139,6 +140,7 @@ def deposit_action(phone_number,amount):
         public_address = key.public_key_hash()
         
         send_sms(phone_number, f"Deposit ${amount} to get {amount_in_tezos:.2f} Tezos in the address: {public_address}.")
+        insert_transaction(phone_number, amount)
     else:
         send_sms(phone_number, "Failed to fetch Tezos price. Please try again later.")
 
