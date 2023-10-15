@@ -103,11 +103,11 @@ class Header extends Component<{}, HeaderState> {
                 </li>
               </Link>
 
-              <Link to="/dashboard">
+              {/* <Link to="/dashboard">
                 <li>
                   <p className="btn-ghost mt-2 text-neutral"> Dashboard </p>
                 </li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
           {isDropdownOpen && (
@@ -135,13 +135,13 @@ class Header extends Component<{}, HeaderState> {
                                 >
                                     Contact us
                                 </Link>
-                                <Link
+                                {/* <Link
                                 to="/"
                                 className="block px-4 py-2 "
                                 onClick={() => this.setState({ isDropdownOpen: false })}
                                 >
                                     Dashboard
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>

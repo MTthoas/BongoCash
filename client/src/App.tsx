@@ -3,9 +3,6 @@ import './App.css'
 
 import Homepage from './pages/Homepage';
 import Dashboard from './pages/Dashboard'
-import Contact from './pages/Contact'
-import Information from './pages/Information'
-
 
 
 function App() {
@@ -17,8 +14,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Homepage/>}/>
                     <Route path="/dashboard" element={<Dashboard/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/information"element={<Information/>}/>
+                    <Route path="/contact" element={<Homepage/>}/>
+                    <Route path="/information"element={<Homepage/>}/>
                 </Routes>
             </div>
         
